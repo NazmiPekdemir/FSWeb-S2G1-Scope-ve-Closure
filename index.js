@@ -79,7 +79,15 @@ Aşağıdaki takimSkoru() fonksiyonununda aşağıdakileri yapınız:
 Not: Bu fonskiyon, aşağıdaki diğer görevler için de bir callback fonksiyonu olarak da kullanılacak
 */
 
+
 function takimSkoru(){
+  return Math.floor(Math.random()*(25- 10 + 1 ) + 10);
+}
+
+
+
+
+/*function takimSkoru(){
 
   let birceyrekskor = 0;
   birceyrekskor =Math.floor(Math.random()*25);
@@ -90,7 +98,7 @@ function takimSkoru(){
   return birceyrekskor;
   }
 }
-console.log(takimSkoru());
+console.log(takimSkoru());*/
 
 
 
