@@ -81,7 +81,7 @@ Not: Bu fonskiyon, aşağıdaki diğer görevler için de bir callback fonksiyon
 
 
 function takimSkoru(){
-  return Math.floor(Math.random()*5); //(25- 10 + 1 ) + 10
+  return Math.floor(Math.random()*4); //(25- 10 + 1 ) + 10
 }
 
 
@@ -216,10 +216,13 @@ function skorTabelasi(mfour,mtwo,period) {
     topEvSa = topEvSa + evSahibiPeriodPuan;
     topKoTa = topKoTa + konukTakımPeriodPuan;
 
-    if(i = period && topEvSa === topKoTa){
-      const uzatma1 = `1.Uzatma  Ev Sahibi ${evSahibiPeriodPuan} - Konuk Takım ${konukTakımPeriodPuan}`;
+    if(i == period && topEvSa == topKoTa){
+      const uzatma1 = `1. Uzatma: Ev Sahibi ${evSahibiPeriodPuan} - Konuk Takım ${konukTakımPeriodPuan}`
       yenidizi.push(uzatma1);
-    }
+
+      topEvSa = topEvSa + evSahibiPeriodPuan;
+      topKoTa = topKoTa + konukTakımPeriodPuan;
+    } 
     
     
   }
