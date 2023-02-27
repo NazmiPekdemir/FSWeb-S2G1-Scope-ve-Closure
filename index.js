@@ -1,6 +1,6 @@
 //README DOSYASINDAKİ ADIMLARI TAKİP ETTİKTEN SONRA AŞAĞIDAKİLERİ YAPINIZ
 
-// Başlangıç Challenge'ı
+// Başlangıç Challenge'ıı
 
 /**Örnek Görev: İlkini Dön
  * 
