@@ -110,14 +110,25 @@ Aşağıdaki macSonucu() fonksiyonununda aşağıdakileri yapınız:
 }
 */ 
 
-function macSonucu(){
+function macSonucu(oldfonk, ceyreksayisi){
   
+  let evSahibipuan = 0;
+  let konukpuan = 0;
+  
+  for(let i = 0; i<ceyreksayisi; i++){
+    evSahibipuan += oldfonk();
+    konukpuan += oldfonk();
+    }
+  
+  let newObj = {
+      "EvSahibi": evSahibipuan,
+      "KonukTakim": konukpuan
+    };
+  
+  return (newObj);
 }
 
-
-
-
-
+console.log(macSonucu(takimSkoru, 4))
 
 /* Zorlayıcı Görev 4: periyotSkoru()
 Aşağıdaki periyotSkoru() fonksiyonununda aşağıdakileri yapınız:
@@ -133,8 +144,8 @@ Aşağıdaki periyotSkoru() fonksiyonununda aşağıdakileri yapınız:
   */
 
 
-function periyotSkoru(/*Kodunuzu buraya yazınız*/) {
-  /*Kodunuzu buraya yazınız*/
+function periyotSkoru() {
+  
 
 }
 
