@@ -200,10 +200,24 @@ MAÇ UZAR ise skorTabelasi(periyotSkoru,takimSkoru,4)
 ] */
 // NOTE: Bununla ilgili bir test yoktur. Eğer logladığınız sonuçlar yukarıdakine benziyor ise tmamlandı sayabilirsiniz.
 
-function skorTabelasi(/*Kodunuzu buraya yazınız*/) {
-  /*Kodunuzu buraya yazınız*/
-}
+function skorTabelasi(mfour,mtwo,period) {
 
+  let yenidizi = [];
+
+  for(let i= 1; i <=period; i++){
+    const fonk = mfour(mtwo);
+    const evSaPePu = fonk.EvSahibi;
+    const koTaPepu = fonk.KonukTakim;
+
+    const ekran = `${i}. Periyot: Ev Sahibi ${evSaPePu} - Konuk Takım ${koTaPepu}`
+    yenidizi.push(ekran);
+  }
+
+  
+
+  return yenidizi;
+}
+console.log(skorTabelasi(periyotSkoru,takimSkoru,4));
 
 
 
