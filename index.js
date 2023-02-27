@@ -81,7 +81,7 @@ Not: Bu fonskiyon, aşağıdaki diğer görevler için de bir callback fonksiyon
 
 
 function takimSkoru(){
-  return Math.floor(Math.random()*4); //(25- 10 + 1 ) + 10
+  return Math.floor(Math.random()*(25- 10 + 1 ) + 10); 
 }
 
 
@@ -150,7 +150,7 @@ Aşağıdaki periyotSkoru() fonksiyonununda aşağıdakileri yapınız:
   "KonukTakim": 12
 }
   */
-
+ 
 
 function periyotSkoru(ikidekifonk) {
   let evSahibipuan = 0;
@@ -213,8 +213,8 @@ function skorTabelasi(mfour,mtwo,period) {
     const ekran = `${i}. Periyot: Ev Sahibi ${evSahibiPeriodPuan} - Konuk Takım ${konukTakımPeriodPuan}`
     yenidizi.push(ekran);
 
-    topEvSa = topEvSa + evSahibiPeriodPuan;
-    topKoTa = topKoTa + konukTakımPeriodPuan;
+    topEvSa += evSahibiPeriodPuan;
+    topKoTa += konukTakımPeriodPuan;
 
     if(i == period && topEvSa == topKoTa){
       const uzatma1 = `1. Uzatma: Ev Sahibi ${evSahibiPeriodPuan} - Konuk Takım ${konukTakımPeriodPuan}`
@@ -232,7 +232,7 @@ function skorTabelasi(mfour,mtwo,period) {
 
   return yenidizi;
 }
-console.log(skorTabelasi(periyotSkoru,takimSkoru,4));
+console.log(skorTabelasi(periyotSkoru,takimSkoru,3));
 
 
 
