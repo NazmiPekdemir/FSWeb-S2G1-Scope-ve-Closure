@@ -1,6 +1,6 @@
 //README DOSYASINDAKİ ADIMLARI TAKİP ETTİKTEN SONRA AŞAĞIDAKİLERİ YAPINIZ
 
-// Başlangıç Challenge'ıı
+// Başlangıç Challenge'ı
 
 /**Örnek Görev: İlkini Dön
  * 
@@ -43,8 +43,9 @@ function skorArtirici() {
    return skor++;
   }
 }
-
 const skor1 = skorArtirici();
+
+
 
 // skor2 kodları
 let skor = 0;
@@ -52,6 +53,20 @@ let skor = 0;
 function skor2() {
   return skor++;
 }
+
+
+/*  C1- Göze çarpan ilk fark birinde iki fonksiyon olması diğerinde tek fonksiyon olması ikinci en büyük fark ise birinde let skor local scope ta diğerinde global scopeta. 
+Böyle bir durumun olması "skor2" başkası tarafında  müdahelesini kolaylaştırır. Kod js esnekliğinde dolayı gene çalışabilir ama doğru bir kullanım değildir. 
+"sko1 ise daha doğru bir kullanımdır."
+
+    C2- Bence "skor1" bir closure kullanmaktadır. Çünkü "skor1" ekstra 1 fonksiyona daha sahiptir. Buda araba içindeki kart örneğinde olduğu gibi sadece bu kodu yazan kişi 2. fonksiyonun
+    nasıl çalıştığını bildiği gibi bir anlamak çıkartır.
+    
+    C3- 2 farklı spor müsabakası için yukarıdaki 2 fonksiyonu kullanalım dersek. 1. fonksiyon bunu için daha uygun olucaktır. Çünkü ikinci fonksiyon değeri globalda güncelleyeceği için
+    hafızada kalıcaktır ve bir sonraki oyun için bu fonksiyon çağrıldığında let skor değeri=0 olmadığı için ilk oyundan kalan skordan devam edicektir ve bu da sonuçta hatalı bir şey çıkaracaktır.
+    2. Fonksiyonu daha çok tek oyun ve bu oyun aralıklı oynanıyorsa kullanabiliriz bir oyun oynanıyor ve ara verildi oyuna yarın sabah tekrar devam edilecek o zaman skorun dünkü gibi kalması daha mantıklı olur.
+
+
 
 
 /* Görev 2: takimSkoru() 
@@ -64,9 +79,18 @@ Aşağıdaki takimSkoru() fonksiyonununda aşağıdakileri yapınız:
 Not: Bu fonskiyon, aşağıdaki diğer görevler için de bir callback fonksiyonu olarak da kullanılacak
 */
 
-function takimSkoru(/*Kodunuzu buraya yazınız*/){
-    /*Kodunuzu buraya yazınız*/
+function takimSkoru(){
+
+  let birceyrekskor = 0;
+  birceyrekskor =Math.floor(Math.random()*25);
+  if(10 < birceyrekskor  && 25 > birceyrekskor){
+    return birceyrekskor;
+  } else {
+  birceyrekskor = 10 + birceyrekskor;
+  return birceyrekskor;
+  }
 }
+console.log(takimSkoru());
 
 
 
@@ -86,8 +110,8 @@ Aşağıdaki macSonucu() fonksiyonununda aşağıdakileri yapınız:
 }
 */ 
 
-function macSonucu(/*Kodunuzu buraya yazınız*/){
-  /*Kodunuzu buraya yazınız*/
+function macSonucu(){
+  
 }
 
 
