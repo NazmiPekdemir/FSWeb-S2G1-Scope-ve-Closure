@@ -144,11 +144,22 @@ Aşağıdaki periyotSkoru() fonksiyonununda aşağıdakileri yapınız:
   */
 
 
-function periyotSkoru() {
+function periyotSkoru(ikidekifonk) {
+  let evSahibipuan = 0;
+  let konukpuan = 0;
   
+  evSahibipuan = ikidekifonk();
+  konukpuan = ikidekifonk();
+
+  let newObj = {
+    "EvSahibi": evSahibipuan,
+    "KonukTakim": konukpuan
+  };
+
+return (newObj);
 
 }
-
+console.log(periyotSkoru(takimSkoru));
 
 /* Zorlayıcı Görev 5: skorTabelasi() 
 Aşağıdaki skorTabelasi() fonksiyonunu kullanarak aşağıdakileri yapınız:
